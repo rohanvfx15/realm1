@@ -13,20 +13,51 @@
         android:layout_marginTop="?android:attr/actionBarSize"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:paddingTop="50dp"
+
         >
 
         <EditText
-            android:hint="Add data Here"
-            android:id="@+id/name"
+            android:hint="Name"
+            android:id="@+id/nameid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:hint="Age"
+            android:id="@+id/ageid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:hint="Status"
+            android:id="@+id/socialacid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:hint="Social Account"
+            android:id="@+id/statusid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <Button
-            android:id="@+id/btn"
-            android:text="Add Data"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:text="add to realm [using main tread]"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="addmaintread"
+            />
+        <Button
+        android:text="add to realm [Background Tread]"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="addbackgroundtread"
+        />
+
+        <Button
+            android:text="display all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="displayall"
+            />
 
     </LinearLayout>
 
