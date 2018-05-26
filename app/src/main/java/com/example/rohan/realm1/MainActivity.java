@@ -1,7 +1,9 @@
 package com.example.rohan.realm1;
 
+import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +16,7 @@ import java.util.UUID;
 
 import io.realm.Realm;
 import io.realm.RealmAsyncTask;
+import io.realm.RealmResults;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -127,6 +130,20 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void displayall(View view) {
+
+        RealmResults<User> userList = myRealm.where(User.class).findAll();
+
+
+        Log.d("all data",""+userList.toString());
+
+       /* for (int i = 0; i < userList.size(); i++){
+
+            Log.d("data", ""+userList.get(i).getName());
+
+
+        }*/
+
+
     }
 
     @Override
