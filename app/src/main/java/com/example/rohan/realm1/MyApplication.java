@@ -12,6 +12,8 @@ public class MyApplication extends Application {
         super.onCreate();
 
         Realm.init(this);
+
+        Realm realm = Realm.getDefaultInstance();
         RealmConfiguration configuration = new RealmConfiguration.Builder()
                 .name("myrealmdb.realm") // by defaul name db default.realm
                 .build();
