@@ -14,6 +14,7 @@ import com.example.rohan.realm1.model.User;
 
 import java.util.UUID;
 
+import io.realm.Case;
 import io.realm.Realm;
 import io.realm.RealmAsyncTask;
 import io.realm.RealmResults;
@@ -131,17 +132,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void displayall(View view) {
 
-        RealmResults<User> userList = myRealm.where(User.class).findAll();
+        RealmResults<User> userList = myRealm.where(User.class)
+                .contains("name","rohan", Case.INSENSITIVE)
+                .findAll();
 
 
-        Log.d("all data",""+userList.toString());
+       // Log.d("all data",""+userList.toString());
 
-       /* for (int i = 0; i < userList.size(); i++){
+        for (int i = 0; i < userList.size(); i++){
 
             Log.d("data", ""+userList.get(i).getName());
 
 
-        }*/
+        }
 
 
     }
